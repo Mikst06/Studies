@@ -1,3 +1,6 @@
+//every number in "numbers.txt" must be in other line. First two numbers in file are limits of sequance that you want to sort.
+//If you want to sort numbers from third to seventh position first numbers in file shoud be 3 and 7. By position I mean order no index of an array.
+//So by 1 I mean first number of an array.
 import java.io.*;
 class Sortowanie
 {
@@ -41,7 +44,7 @@ class Sortowanie
     }
     public int[] BuildHeap(int[] A)
     {
-        for(int i = ((y-x+1)/2)+x-1; i>=x ;i--) // (y-x+1) to inaczej ilosc elementow kopca,
+        for(int i = ((y-x+1)/2)+x-1; i>=x ;i--)
         {
             Heapify(A,i);
         }
@@ -49,7 +52,7 @@ class Sortowanie
     }
     public int[] HeapSort(int[] A){
         BuildHeap(A);
-        for(int i = y; i>x ;i--) //x odpowiada za korzeń, y za podmienianego z korzeniem syna ( y to granica gorna wiec tez ostatni element ciagu )
+        for(int i = y; i>x ;i--)
         {
             int z;
             z = A[y];
@@ -66,15 +69,13 @@ public class Kopiec {
     public static void main(String[] args) throws Exception
     {
         Sortowanie kopiec = new Sortowanie();
-        ///////////////////////////////OBLICZENIE WIELKOSCI TABLICY///////////////////////////////
         int size = 0;
-        File file = new File("liczby.txt");//plik wejsciowy
+        File file = new File("numbers.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
         while ((st = br.readLine()) != null) {
             size++;
         }
-        //////////////////////////////WCZYTYWANIE LICZB DO TABLICY/////////////////////////////////
         br = new BufferedReader(new FileReader(file));
         int indeks = 0;
         int x = 0;
@@ -88,11 +89,11 @@ public class Kopiec {
                 indeks++;
             }
         }
-        if( (x+1 >= 1) && ( y+1 >= x+1 ) ){  //sprawdzenie czy x i y spełniają warunki zadania
+        if( (x+1 >= 1) && ( y+1 >= x+1 ) ){
             indeks = 0;
-            int[] A = new int[size - 2];// inicjalizacja tablicy
+            int[] A = new int[size - 2];
             br = new BufferedReader(new FileReader(file));
-            while ((st = br.readLine()) != null) { //petla wczytujaca liczby do tablicy
+            while ((st = br.readLine()) != null)
                 if (indeks < 2) {
                     indeks++;
                 } else {
@@ -100,17 +101,15 @@ public class Kopiec {
                     indeks++;
                 }
             }
-            kopiec.newSize(y - x + 1); //przekazanie wielkosci tablicy do klasy Sortowanie
-            kopiec.wczytajXY(x, y); // przekazanie wartosci x oraz y do klasy Sortowanie
-            //////////////////////////////SORTOWANIE PRZEZ KOPCOWANIE//////////////////////////////////
+            kopiec.newSize(y - x + 1);
+            kopiec.wczytajXY(x, y); 
             A = kopiec.HeapSort(A);
-            //////////////////////////////WPISYWANIE WYNIKU DO PLIKU WYJŚCIOWEGO///////////////////////
-            PrintStream ps = new PrintStream("wynik.txt"); //nazwa pliku wyjsciowego
+            PrintStream ps = new PrintStream("result.txt");
             for (int i = 0; i < A.length; i++) {
                 ps.println(A[i]);
             }
         }
-        else // jeżeli x lub y nie spełnia warunków zadania do użytkownika wysłany jest komunikat
+        else
         {
             System.out.println("Podany warunek nie został spełniony");
             if(x>y)
