@@ -65,7 +65,7 @@ class Sorting
     }
 
 }
-public class Kopiec {
+public class HeapSortAlgorithm {
     public static void main(String[] args) throws Exception
     {
         Sorting heap = new Sorting();
