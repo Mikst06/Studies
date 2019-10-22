@@ -2,11 +2,11 @@
 //If you want to sort numbers from third to seventh position first numbers in file shoud be 3 and 7. By position I mean order no index of an array.
 //So by 1 I mean first number of an array.
 import java.io.*;
-class Sortowanie
+class Sorting
 {
     private int size;
     private int x,y;
-    public void wczytajXY(int x, int y){
+    public void readXY(int x, int y){
         this.x = x;
         this.y = y;
     }
@@ -68,7 +68,7 @@ class Sortowanie
 public class Kopiec {
     public static void main(String[] args) throws Exception
     {
-        Sortowanie kopiec = new Sortowanie();
+        Sorting heap = new Sorting();
         int size = 0;
         File file = new File("numbers.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
@@ -77,33 +77,33 @@ public class Kopiec {
             size++;
         }
         br = new BufferedReader(new FileReader(file));
-        int indeks = 0;
+        int index = 0;
         int x = 0;
         int y = 0;
         while ((st = br.readLine()) != null) {
-            if (indeks == 0) {
+            if (index == 0) {
                 x = Integer.parseInt(st) - 1;
-                indeks++;
-            } else if (indeks == 1) {
+                index++;
+            } else if (index == 1) {
                 y = Integer.parseInt(st) - 1;
-                indeks++;
+                index++;
             }
         }
         if( (x+1 >= 1) && ( y+1 >= x+1 ) ){
-            indeks = 0;
+            index = 0;
             int[] A = new int[size - 2];
             br = new BufferedReader(new FileReader(file));
             while ((st = br.readLine()) != null)
-                if (indeks < 2) {
-                    indeks++;
+                if (index < 2) {
+                    index++;
                 } else {
-                    A[indeks - 2] = Integer.parseInt(st);
-                    indeks++;
+                    A[index - 2] = Integer.parseInt(st);
+                    index++;
                 }
             }
             kopiec.newSize(y - x + 1);
-            kopiec.wczytajXY(x, y); 
-            A = kopiec.HeapSort(A);
+            kopiec.readXY(x, y); 
+            A = heap.HeapSort(A);
             PrintStream ps = new PrintStream("result.txt");
             for (int i = 0; i < A.length; i++) {
                 ps.println(A[i]);
@@ -111,7 +111,7 @@ public class Kopiec {
         }
         else
         {
-            System.out.println("Podany warunek nie został spełniony");
+            System.out.println("The given condition has not been met");
             if(x>y)
                 System.out.println((x+1) + " (x) >= (y) " + (y+1));
             if(x+1<1)
