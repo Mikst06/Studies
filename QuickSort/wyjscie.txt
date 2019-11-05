@@ -1,0 +1,17 @@
+DANE LOSOWE
+| 		rozmiar tablicy N	| 	algorytm normalny	   | 	algorytm zmodyfikowany	 | 	BombelSort			 |
+|			2000			|			0,2650			|			0,2611			|			7,3577			|
+|			4000			|			0,4162			|			0,4479			|			26,8733			|
+|			6000			|			0,5374			|			0,5215			|			62,8470			|
+|			8000			|			0,7074			|			0,6331			|			107,1795			|
+|			10000			|			0,9742			|			0,8738			|			192,9625			|
+
+Sort wykonany dla 200 powtorzen.
+
+DANE NIEKORZYSTNE
+| 		rozmiar tablicy N	| 	algorytm normalny	   | 	algorytm zmodyfikowany	 | 	BombelSort			 |
+|			2000			|			2,4515			|			2,3740			|			2,2242			|
+|			4000			|			8,4478			|			8,1443			|			7,8409			|
+|			6000			|			17,8189			|			17,6211			|			17,0044			|
+|			8000			|			31,7820			|			30,9880			|			30,2259			|
+|			10000			|			56,3160			|			54,2318			|			51,7890			|
