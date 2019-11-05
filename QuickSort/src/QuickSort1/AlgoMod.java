@@ -1,5 +1,5 @@
 package QuickSort1;
-
+//Mixed Quicksort using bubble sort
 public class AlgoMod {
     private void Swap(int A[], int i, int j) {
         int memo;
