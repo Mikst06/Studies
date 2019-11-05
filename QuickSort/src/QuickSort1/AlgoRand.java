@@ -1,5 +1,5 @@
 package QuickSort1;
-
+//Quicksort using random pivot
 import java.util.Random;
 
 public class AlgoRand {
