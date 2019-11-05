@@ -4,27 +4,27 @@ import java.io.*;
 public class AlgoStart {
     public static void main(String[] args) throws IOException {
 
-        final int ILOSC_POWTORZEN = 200;
-        final int ZWIEKSZANIE_O_2000 = 5;
-        final int WSPOLCZYNNIK_C = 10;
+        final int NUMBER_OF_REPETITIONS = 200;
+        final int INCREASING_2000 = 5;
+        final int COEFFICIENT_C = 10;
         final double MILLISECONDS = 0.000001;
 
         int numbers = 2000;
         double allTime1 = 0.0;
         double allTime2 = 0.0;
         double allTime3 = 0.0;
-        PrintStream fileOut2 = new PrintStream("wyjscie.txt");
+        PrintStream fileOut2 = new PrintStream("output.txt");
         System.setOut(fileOut2);
-        System.out.println("DANE LOSOWE");
-        System.out.println("| \t\trozmiar tablicy N\t| \talgorytm normalny\t   | \talgorytm zmodyfikowany\t | \tBombelSort\t\t\t |");
-        for (int z = 1; z < ZWIEKSZANIE_O_2000+1; z++,numbers += 2000) {
-            for (int q = 1; q < ILOSC_POWTORZEN+1; q++) {
-                PrintStream fileOut1 = new PrintStream("wejscie.txt");
+        System.out.println("RANDOM DATA");
+        System.out.println("| \t\tSIZE OF AN ARRAY\t| \tQUICK SORT\t   | \tMIXED QUICKSORT\t | \tBUBBLE SORT\t\t\t |");
+        for (int z = 1; z < INCREASING_2000+1; z++,numbers += 2000) {
+            for (int q = 1; q < NUMBER_OF_REPETITIONS+1; q++) {
+                PrintStream fileOut1 = new PrintStream("input.txt");
                 System.setOut(fileOut1);
                 for (int i = 0; i < numbers; i++) {
                     System.out.println(RandomNumber.generateRandomIntIntRange(0, 1000));
                 }
-                File file = new File("wejscie.txt");
+                File file = new File("input.txt");
                 BufferedReader br = new BufferedReader(new FileReader(file));
                 String st;
                 int size = 0;
@@ -50,7 +50,7 @@ public class AlgoStart {
                 sort.Quicksort(A, 0, size - 1);
                 long endTime = System.nanoTime();
                 long startTime2 = System.nanoTime();
-                sort2.Quicksort(B, 0, size - 1, WSPOLCZYNNIK_C);
+                sort2.Quicksort(B, 0, size - 1, COEFFICIENT_C);
                 long endTime2 = System.nanoTime();
                 long startTime3 = System.nanoTime();
                 bombel.BubbleSort(E, 0, size - 1);
@@ -65,26 +65,26 @@ public class AlgoStart {
                 double avgTime2 = (allTime2 / q) * MILLISECONDS;
                 double avgTime3 = (allTime3 / q) * MILLISECONDS;
                 System.setOut(fileOut2);
-                if(q==ILOSC_POWTORZEN){
+                if(q==NUMBER_OF_REPETITIONS){
                 System.out.format("|\t\t\t%d\t\t\t|\t\t\t%.4f\t\t\t|\t\t\t%.4f\t\t\t|\t\t\t%.4f\t\t\t|\n", numbers, avgTime1, avgTime2, avgTime3);
             }}
             allTime1=0;
             allTime2=0;
             allTime3=0;
         }
-        System.out.println("\nSort wykonany dla " + ILOSC_POWTORZEN + " powtorzen.\n");
+        System.out.println("\nAlgortihm repeated " + NUMBER_OF_REPETITIONS + " times.\n");
         System.setOut(fileOut2);
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         numbers = 2000;
-        System.out.println("DANE NIEKORZYSTNE");
-        System.out.println("| \t\trozmiar tablicy N\t| \talgorytm normalny\t   | \talgorytm zmodyfikowany\t | \tBombelSort\t\t\t |");
-        for (int z = 1; z < ZWIEKSZANIE_O_2000+1; z++, numbers+=2000) {
-            for (int q = 1; q < ILOSC_POWTORZEN + 1; q++) {
+        System.out.println("DESCENDING SEQUENCE");
+        System.out.println("| \t\tSIZE OF AN ARRAY\t| \tQUICK SORT\t   | \tMIXED QUICKSORT\t | \tBUBBLE SORT\t\t\t |");
+        for (int z = 1; z < INCREASING_2000+1; z++, numbers+=2000) {
+            for (int q = 1; q < NUMBER_OF_REPETITIONS + 1; q++) {
                 String st;
-                File file = new File("wejscie.txt");
-                PrintStream fileOut1 = new PrintStream("wejscie.txt");
+                File file = new File("input.txt");
+                PrintStream fileOut1 = new PrintStream("input.txt");
                 System.setOut(fileOut1);
                 BufferedReader br = new BufferedReader(new FileReader(file));
                 for (int i = numbers; i > 0; i--) {
@@ -109,7 +109,7 @@ public class AlgoStart {
                 sort.Quicksort(C, 0, numbers - 1);
                 long endTime = System.nanoTime();
                 long startTime2 = System.nanoTime();
-                sort2.Quicksort(D, 0, numbers - 1, WSPOLCZYNNIK_C);
+                sort2.Quicksort(D, 0, numbers - 1, COEFFICIENT_C);
                 long endTime2 = System.nanoTime();
                 long startTime3 = System.nanoTime();
                 bombel.BubbleSort(E, 0, numbers - 1);
@@ -125,7 +125,7 @@ public class AlgoStart {
                 double avgTime3 = (allTime3 / q) * MILLISECONDS;
 
                 System.setOut(fileOut2);
-                if(q==ILOSC_POWTORZEN) {
+                if(q==NUMBER_OF_REPETITIONS) {
                     System.out.format("|\t\t\t%d\t\t\t|\t\t\t%.4f\t\t\t|\t\t\t%.4f\t\t\t|\t\t\t%.4f\t\t\t|\n", numbers, avgTime1, avgTime2, avgTime3);
                 }
             }
