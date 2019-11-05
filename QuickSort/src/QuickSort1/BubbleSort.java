@@ -1,6 +1,6 @@
 package QuickSort1;
 
-public class BombelSort {
+public class BubbleSort {
     private void Swap(int A[], int i, int j) {
         int memo;
         memo = A[i];
@@ -16,14 +16,6 @@ public class BombelSort {
                 }
             }
         }
-/*        for(int i=0;i<r;i++)
-        {
-            for(int j=p;j<r-i;j++){
-                if(A[j]>A[j+1]){
-                    Swap(A,j,j+1);
-                }
-            }
-        }*/
         return A;
     }
 
