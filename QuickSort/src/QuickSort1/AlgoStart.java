@@ -1,12 +1,12 @@
 package QuickSort1;
-
+// an output of program is an array including average time of work of an algorithm
 import java.io.*;
 public class AlgoStart {
     public static void main(String[] args) throws IOException {
 
-        final int NUMBER_OF_REPETITIONS = 200;
-        final int INCREASING_2000 = 5;
-        final int COEFFICIENT_C = 10;
+        final int NUMBER_OF_REPETITIONS = 200;// how many times will algorithm work
+        final int INCREASING_2000 = 5; // INCREASING_2000 = 5 means that first size of an array will be 2000, then 4000, 6000, 8000, 10000
+        final int COEFFICIENT_C = 10; // coefficient informating under which size of an array algorithm will start sorting using Bubble Sort
         final double MILLISECONDS = 0.000001;
 
         int numbers = 2000;
