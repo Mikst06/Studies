@@ -1,5 +1,5 @@
 package QuickSort1;
-
+//Normal quicksort algorithm
 public class AlgNorm {
     public static void Swap(int A[],int i, int j)
     {
