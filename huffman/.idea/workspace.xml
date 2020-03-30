@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8ecdd5d1-fef6-46e8-9ab5-0ab2173cbbd6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1ZnV09X4DFYS5mmQhFVMQxsFItW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/huffman" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="huffman.start" />
+      <module name="huffman" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="huffman.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8ecdd5d1-fef6-46e8-9ab5-0ab2173cbbd6" name="Default Changelist" comment="" />
+      <created>1585474619450</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585474619450</updated>
+      <workItem from="1585511584985" duration="1131000" />
+      <workItem from="1585515658399" duration="1460000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="466" y="155" width="426" height="479" key="FileChooserDialogImpl" timestamp="1585475023773">
+      <screen x="0" y="25" width="1366" height="743" />
+    </state>
+    <state x="466" y="155" width="426" height="479" key="FileChooserDialogImpl/0.25.1366.743@0.25.1366.743" timestamp="1585475023773" />
+    <state width="1877" height="363" key="GridCell.Tab.0.bottom" timestamp="1585517065686">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585517065686" />
+    <state width="1320" height="221" key="GridCell.Tab.0.bottom/0.25.1366.743@0.25.1366.743" timestamp="1585500992209" />
+    <state width="1877" height="363" key="GridCell.Tab.0.center" timestamp="1585517065686">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585517065686" />
+    <state width="1320" height="221" key="GridCell.Tab.0.center/0.25.1366.743@0.25.1366.743" timestamp="1585500992207" />
+    <state width="1877" height="363" key="GridCell.Tab.0.left" timestamp="1585517065685">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585517065685" />
+    <state width="1320" height="221" key="GridCell.Tab.0.left/0.25.1366.743@0.25.1366.743" timestamp="1585500992206" />
+    <state width="1877" height="363" key="GridCell.Tab.0.right" timestamp="1585517065686">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="363" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585517065686" />
+    <state width="1320" height="221" key="GridCell.Tab.0.right/0.25.1366.743@0.25.1366.743" timestamp="1585500992208" />
+    <state width="1320" height="221" key="GridCell.Tab.1.bottom" timestamp="1585500992210">
+      <screen x="0" y="25" width="1366" height="743" />
+    </state>
+    <state width="1320" height="221" key="GridCell.Tab.1.bottom/0.25.1366.743@0.25.1366.743" timestamp="1585500992210" />
+    <state width="1320" height="221" key="GridCell.Tab.1.center" timestamp="1585500992209">
+      <screen x="0" y="25" width="1366" height="743" />
+    </state>
+    <state width="1320" height="221" key="GridCell.Tab.1.center/0.25.1366.743@0.25.1366.743" timestamp="1585500992209" />
+    <state width="1320" height="221" key="GridCell.Tab.1.left" timestamp="1585500992209">
+      <screen x="0" y="25" width="1366" height="743" />
+    </state>
+    <state width="1320" height="221" key="GridCell.Tab.1.left/0.25.1366.743@0.25.1366.743" timestamp="1585500992209" />
+    <state width="1320" height="221" key="GridCell.Tab.1.right" timestamp="1585500992209">
+      <screen x="0" y="25" width="1366" height="743" />
+    </state>
+    <state width="1320" height="221" key="GridCell.Tab.1.right/0.25.1366.743@0.25.1366.743" timestamp="1585500992209" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585515665559">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585515665559" />
+    <state x="690" y="286" key="extract.method.dialog" timestamp="1585512117246">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="286" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585512117246" />
+    <state x="346" y="177" key="run.anything.popup" timestamp="1585485638899">
+      <screen x="0" y="25" width="1366" height="743" />
+    </state>
+    <state x="346" y="177" key="run.anything.popup/0.25.1366.743@0.25.1366.743" timestamp="1585485638899" />
+  </component>
+</project>
