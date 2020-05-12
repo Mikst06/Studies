@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang=”pl”>
+<body onload="objetosc()">
+
+<p><b>Zadanie</b><p>
+<p>Oblicz objętość ostrosłupa o wysokości <span style='color: #b5e61d'>H</span>, gdzie podstawa to kwadrat o przekątnej <span style='color: #b5e61d'>d</span>.</p>
+<p><b>Dane wejściowe</b></p>
+<p><i>H = </i><input id="wysokosc" type="int" oninput="objetosc()" value="10"></p>
+<p><i>d = </i><input id="przekatna" type="int" oninput="objetosc()" value="10"></p>
+<p><b>Rysunek</b></p>
+<svg height="370" width="500">
+   <line x1="50" y1="340" x2="320" y2="290" style="stroke:red;stroke-width:2"/>
+   <line x1="120" y1="290" x2="250" y2="340" style="stroke:purple;stroke-width:2"/>
+   <line x1="50" y1="340" x2="250" y2="340" style="stroke:black;stroke-width:2" />
+   <line x1="250" y1="340" x2="320" y2="290" style="stroke:black;stroke-width:2" />
+   <line x1="50" y1="340" x2="120" y2="290" style="stroke:black;stroke-width:2" stroke-dasharray="9"/>
+   <line x1="120" y1="290" x2="320" y2="290" style="stroke:black;stroke-width:2" stroke-dasharray="9"/>
+   <line x1="50" y1="340" x2="50" y2="40" style="stroke:blue;stroke-width:2"/>
+   <line x1="120" y1="290" x2="50" y2="40" style="stroke:black;stroke-width:2" stroke-dasharray="9"/>
+   <line x1="250" y1="340" x2="50" y2="40" style="stroke:black;stroke-width:2"/>
+   <line x1="320" y1="290" x2="50" y2="40" style="stroke:black;stroke-width:2"/>
+   <text id="wysokoscText" x="25" y="220" font-size="20" stroke="blue" fill="blue">10</text>
+   <text id="przekatna1Text" x="120" y="320" font-size="17" stroke="red" fill="red">10</text>
+   <text id="przekatna2Text" x="180" y="335" font-size="17" stroke="purple" fill="purple">10</text>
+  Sorry, your browser does not support inline SVG.
+</svg>
+<p>
+<math style="font-size:30px">
+	<mi>V</mi>
+		<mo>=</mo>
+	<mi>H</mi>
+	<mo>&times;</mo>
+	<msub>
+		<mi>P</mi>
+		<mn>p</mn>
+	</msub>
+	<mo>&times;</mo>
+	<mfrac>
+		<mrow>
+			<mi>1</mi>
+		</mrow>
+		<mrow>
+			<mi>3</mi>
+		</mrow>
+	</mfrac>
+	
+	<mo>=</mo>
+	<mi>H</mi>
+	<mo>&times;</mo>
+	<mfrac>
+		<mrow>
+			<msup>
+				<mi>d</mi>
+				<mn>2</mn>
+			</msup>
+		</mrow>
+		<mrow>
+			<mi>2</mi>
+		</mrow>
+	</mfrac>
+	<mo>&times;</mo>
+	<mfrac>
+		<mrow>
+			<mi>1</mi>
+		</mrow>
+		<mrow>
+			<mi>3</mi>
+		</mrow>
+	</mfrac>
+	<mo>=</mo>
+	
+	<mi id="wysokoscMath"></mi>
+	<mo>&times;</mo>
+	<mfrac>
+		<mrow>
+			<msup>
+				<mi id="przekatnaMath"></mi>
+				<mn>2</mn>
+			</msup>
+		</mrow>
+		<mrow>
+			<mi>2</mi>
+		</mrow>
+	</mfrac>
+	<mo>&times;</mo>
+	<mfrac>
+		<mrow>
+			<mi>1</mi>
+		</mrow>
+		<mrow>
+			<mi>3</mi>
+		</mrow>
+	</mfrac>
+	<mo>=</mo>
+	<mi id="wynikMath"></mi>
+</math>
+</p>
+<script>
+function objetosc() {
+
+let H = document.getElementById("wysokosc").value;
+let d = document.getElementById("przekatna").value;
+
+var wynik = (H*((d*d)/2)/3);
+wynik = Math.round(wynik * 100) / 100;
+
+document.getElementById("wynikMath").innerHTML =wynik;
+document.getElementById("wysokoscText").innerHTML = H;
+document.getElementById("wysokoscMath").innerHTML = H;
+document.getElementById("przekatnaMath").innerHTML = d;
+document.getElementById("przekatna1Text").innerHTML = d;
+document.getElementById("przekatna2Text").innerHTML = d;
+}
+</script>
+</body>
+</html> 
