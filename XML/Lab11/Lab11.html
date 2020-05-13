@@ -106,16 +106,31 @@ body {
 	<mi id="wynikMath"></mi>
 </math>
 </p>
+<p id="ostrzezenie"></p>
 <script>
 function objetosc() {
 
 let H = document.getElementById("wysokosc").value;
 let d = document.getElementById("przekatna").value;
-
+if( ( H <= 0 ) && ( d <= 0 ) ){
+H=1;
+d=1;
+document.getElementById("ostrzezenie").innerHTML = "Podana wysokość oraz przekątna jest niedodatnia. Autouzupełnienie do 1";
+}
+else{
+if( H <= 0){
+H=1;
+document.getElementById("ostrzezenie").innerHTML = "Podana wysokość jest niedodatnia. Autouzupełnienie do 1";
+}
+if( d <= 0){
+d=1;
+document.getElementById("ostrzezenie").innerHTML = "Podana przekątna jest niedodatnia. Autouzupełnienie do 1";
+}
+}
 var wynik = (H*((d*d)/2)/3);
 wynik = Math.round(wynik * 100) / 100;
 
-document.getElementById("wynikMath").innerHTML =wynik;
+document.getElementById("wynikMath").innerHTML = wynik;
 document.getElementById("wysokoscText").innerHTML = H;
 document.getElementById("wysokoscMath").innerHTML = H;
 document.getElementById("przekatnaMath").innerHTML = d;
