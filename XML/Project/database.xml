@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+<?xml-stylesheet type="text/xsl" href="database.xsl"?>
+-->
+<?xml-stylesheet type="text/css" href="database.css"?>
+<!DOCTYPE base SYSTEM "database.dtd">
+<base>
+	<books>
+		<book barcodeIdRef="x0590725481627" idSupplierIdRef="x12">
+			<name>Repetytorium maturalne. Jezyk angielski. Poziom rozszerzony</name>
+			<category>school</category>
+			<author>Longman</author>
+			<publisher>Pearson Education</publisher>
+			<price>64.49</price>
+		</book>
+		<book barcodeIdRef="x9482395741987" idSupplierIdRef="x11">
+			<name>Biologia na czasie 3. Podrecznik. Zakres rozszerzony</name>
+			<category>school</category>
+			<author>Dubert Franciszek</author>
+			<publisher>Nowa Era</publisher>
+			<price>39.97</price>
+		</book>
+		<book barcodeIdRef="x0364824957127" idSupplierIdRef="x11">
+			<name>Czerwone Zwoje Magii</name>
+			<category>adventure</category>
+			<author>Clare Cassandra</author>
+			<publisher>We need YA</publisher>
+			<price>27.65</price>
+		</book>
+		<book barcodeIdRef="x0428562738153" idSupplierIdRef="x11">
+			<name>Harry Potter i Kamien Filozoficzny</name>
+			<category>adventure</category>
+			<author>Rowling J.K.</author>
+			<publisher>Media Rodzina</publisher>
+			<price>24.95</price>
+		</book>
+		<book barcodeIdRef="x0658498274127" idSupplierIdRef="x12">
+			<name>Hot Water Music</name>
+			<category>philosophy</category>
+			<author>Charles Bukowski</author>
+			<publisher>Harpercollins</publisher>
+			<price>86.99</price>
+		</book>
+		<book barcodeIdRef="x8347872940136" idSupplierIdRef="x12">
+			<name>Podrecznik manipulacji</name>
+			<category>psychology</category>
+			<author>Hartley Gregory</author>
+			<publisher>Wydawnictwo Bellona</publisher>
+			<price>29.90</price>
+		</book>
+		<book barcodeIdRef="x4307019865702" idSupplierIdRef="x11">
+			<name>Skandal</name>
+			<category>romance</category>
+			<author>Nowakowska Katarzyna</author>
+			<publisher>Burda Media Polska</publisher>
+			<price>39.90</price>
+		</book>
+		<book barcodeIdRef="x8432657101206" idSupplierIdRef="x11">
+			<name>Rasizm i nietolerancja. Nie!</name>
+			<category>education</category>
+			<author>Dutheil Florence</author>
+			<publisher>Wydawnictwo Muchomor</publisher>
+			<price>29.00</price>
+		</book>
+	</books>
+	
+	<other_products>
+		<product barcodeIdRef="x0628987517287" idSupplierIdRef="x13">
+			<name>Okladka na dokumenty</name>
+			<brand>Panta Plast</brand>
+			<price>5.02</price>
+		</product>
+		<product barcodeIdRef="x7639485981234" idSupplierIdRef="x13">
+			<name>Okladka samoprzylepna przezroczysta</name>
+			<brand>Panta Plast</brand>
+			<price>4.93</price>
+		</product>
+		<product barcodeIdRef="x4682649081762" idSupplierIdRef="x14">
+			<name>Dlugopis Orange czarny</name>
+			<brand>Bic</brand>
+			<price>1.28</price>
+		</product>
+		<product barcodeIdRef="x7645983261024" idSupplierIdRef="x14">
+			<name>Papier do drukarki</name>
+			<brand>Europapier-Impap</brand>
+			<price>19.99</price>
+		</product>
+		<product barcodeIdRef="x3047981645032" idSupplierIdRef="x14">
+			<name>Klej w sztyfcie</name>
+			<brand>Astra</brand>
+			<price>2.86</price>
+		</product>
+	</other_products>
+	
+	<suppliers>
+		<supplier idSupplierId="x11">
+			<name>Boox</name>
+			<category>books</category>
+			<TIN>1958052390</TIN>
+			<email>boox.company@xyz.com</email>
+			<phone_number>456777990</phone_number>
+		</supplier>
+		<supplier idSupplierId="x12">
+			<name>Writ</name>
+			<category>other</category>
+			<TIN>6440637814</TIN>
+			<email>writ.contact@xyz.com</email>
+			<phone_number>229475909</phone_number>
+		</supplier>
+		<supplier idSupplierId="x13">
+			<name>P&amp;P</name>
+			<category>other</category>
+			<TIN>4790326768</TIN>
+			<email>ppforbusiness@xyz.com</email>
+			<phone_number>925720946</phone_number>
+		</supplier>
+		<supplier idSupplierId="x14">
+			<name>PaperWorld</name>
+			<category>books</category>
+			<TIN>3459871090</TIN>
+			<email>paperworld@xyz.com</email>
+			<phone_number>456910725</phone_number>
+		</supplier>
+	</suppliers>
+	
+	<inventory>
+		<prInv barcodeId="x0364824957127">
+			<amount>4</amount>
+		</prInv>
+		<prInv barcodeId="x0628987517287">
+			<amount>20</amount>
+		</prInv>
+		<prInv barcodeId="x9482395741987">
+			<amount>2</amount>
+		</prInv>
+		<prInv barcodeId="x0658498274127">
+			<amount>1</amount>
+		</prInv>
+		<prInv barcodeId="x7639485981234">
+			<amount>10</amount>
+		</prInv>
+		<prInv barcodeId="x4682649081762">
+			<amount>100</amount>
+		</prInv>
+		<prInv barcodeId="x0590725481627">
+			<amount>3</amount>
+		</prInv>
+		<prInv barcodeId="x0428562738153">
+			<amount>2</amount>
+		</prInv>
+		<prInv barcodeId="x8347872940136">
+			<amount>3</amount>
+		</prInv>
+		<prInv barcodeId="x4307019865702">
+			<amount>5</amount>
+		</prInv>
+		<prInv barcodeId="x7645983261024">
+			<amount>20</amount>
+		</prInv>
+		<prInv barcodeId="x3047981645032">
+			<amount>50</amount>
+		</prInv>
+		<prInv barcodeId="x8432657101206">
+			<amount>3</amount>
+		</prInv>
+	</inventory>
+	
+	<orders>
+		<order>
+			<id>x21</id>
+			<cart>
+				<prOrd barcodeIdRef="x0590725481627">
+					<amount>1</amount>
+				</prOrd>
+				<prOrd barcodeIdRef="x9482395741987">
+					<amount>1</amount>
+				</prOrd>
+			</cart>
+		</order>
+		<order>
+			<id>x22</id>
+			<cart>
+				<prOrd barcodeIdRef="x4682649081762">
+					<amount>50</amount>
+				</prOrd>
+			</cart>
+		</order>
+		<order>
+			<id>x23</id>
+			<cart>
+				<prOrd barcodeIdRef="x0428562738153">
+					<amount>1</amount>
+				</prOrd>
+			</cart>
+		</order>
+		<order>
+			<id>x24</id>
+			<cart>
+				<prOrd barcodeIdRef="x3047981645032">
+					<amount>14</amount>
+				</prOrd>
+			</cart>
+		</order>
+	</orders>
+</base>

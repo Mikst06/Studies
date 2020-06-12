@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:simpleType name="nameType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="categoryType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="authorType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="publisherType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="priceType">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="brandType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="TINType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]{10}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="emailType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9a-zA-Z.]*@[a-zA-z]*.[a-z]{1,3}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="phone_numberType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]{9}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="amountType">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="idSupplierType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="x[0-9]{2}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="barcodeType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="x[0-9]{13}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="bookType">
+		<xsd:sequence>
+			<xsd:element name="name" type="nameType"/>
+			<xsd:element name="category" type="categoryType"/>
+			<xsd:element name="author" type="authorType"/>
+			<xsd:element name="publisher" type="publisherType"/>
+			<xsd:element name="price" type="priceType"/>
+		</xsd:sequence>
+		<xsd:attribute name="barcodeIdRef" type="barcodeType" use="required"/>
+		<xsd:attribute name="idSupplierIdRef" type="idSupplierType" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="productType">
+		<xsd:sequence>
+			<xsd:element name="name" type="nameType"/>
+			<xsd:element name="brand" type="brandType"/>
+			<xsd:element name="price" type="priceType"/>
+		</xsd:sequence>
+		<xsd:attribute name="barcodeIdRef" type="barcodeType" use="required"/>
+		<xsd:attribute name="idSupplierIdRef" type="idSupplierType" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="supplierType">
+		<xsd:sequence>
+			<xsd:element name="name" type="nameType"/>
+			<xsd:element name="category" type="categoryType"/>
+			<xsd:element name="TIN" type="TINType"/>
+			<xsd:element name="email" type="emailType"/>
+			<xsd:element name="phone_number" type="phone_numberType"/>
+		</xsd:sequence>
+		<xsd:attribute name="idSupplierId" type="idSupplierType" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="prInvType">
+		<xsd:sequence>
+			<xsd:element name="amount" type="amountType"/>
+		</xsd:sequence>
+		<xsd:attribute name="barcodeId" type="barcodeType" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="prOrdType">
+		<xsd:sequence>
+			<xsd:element name="amount" type="amountType"/>
+		</xsd:sequence>
+		<xsd:attribute name="barcodeIdRef" type="barcodeType" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="cartType">
+		<xsd:sequence>
+			<xsd:element name="prOrd" type="prOrdType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="orderType">
+		<xsd:sequence>
+			<xsd:element name="id" type="idSupplierType"/>
+			<xsd:element name="cart" type="cartType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ordersType">
+		<xsd:sequence>
+			<xsd:element name="order" type="orderType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="booksType">
+		<xsd:sequence>
+			<xsd:element name="book" type="bookType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="other_productsType">
+		<xsd:sequence>
+			<xsd:element name="product" type="productType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="suppliersType">
+		<xsd:sequence>
+			<xsd:element name="supplier" type="supplierType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="inventoryType">
+		<xsd:sequence>
+			<xsd:element name="prInv" type="prInvType" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="baseType">
+		<xsd:sequence>
+			<xsd:element name="books" type="booksType"/>
+			<xsd:element name="other_products" type="other_productsType"/>
+			<xsd:element name="suppliers" type="suppliersType"/>
+			<xsd:element name="inventory" type="inventoryType"/>
+			<xsd:element name="orders" type="ordersType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="base" type="baseType">
+		<xsd:key name="barcodeId_key">
+			<xsd:selector xpath="inventory/prInv"/>
+			<xsd:field xpath="@barcodeId"/>
+		</xsd:key>
+
+		<xsd:keyref name="barcodeIdRef1_key" refer="barcodeId_key">
+			<xsd:selector xpath="books/book"/>
+			<xsd:field xpath="@barcodeIdRef"/>
+		</xsd:keyref>
+		
+		<xsd:keyref name="barcodeIdRef2_key" refer="barcodeId_key">
+			<xsd:selector xpath="other_products/product"/>
+			<xsd:field xpath="@barcodeIdRef"/>
+		</xsd:keyref>
+		
+		<xsd:keyref name="barcodeIdRef3_key" refer="barcodeId_key">
+			<xsd:selector xpath="orders/order/cart/prOrd"/>
+			<xsd:field xpath="@barcodeIdRef"/>
+		</xsd:keyref>
+
+		<xsd:key name="supplierId_key">
+			<xsd:selector xpath="suppliers/supplier"/>
+			<xsd:field xpath="@idSupplierId"/>
+		</xsd:key>
+
+		<xsd:keyref name="supplierIdRef1_key" refer="supplierId_key">
+			<xsd:selector xpath="books/book"/>
+			<xsd:field xpath="@idSupplierIdRef"/>
+		</xsd:keyref>
+		
+		<xsd:keyref name="supplierIdRef2_key" refer="supplierId_key">
+			<xsd:selector xpath="other_products/product"/>
+			<xsd:field xpath="@idSupplierIdRef"/>
+		</xsd:keyref>
+	</xsd:element>
+	
+	
+</xsd:schema>

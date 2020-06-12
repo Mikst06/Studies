@@ -1,0 +1,411 @@
+base{
+	background-color: #FBFBFB;
+	display: flex;
+	border: 2px solid #FF3030;
+	justify-content: center;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+books{
+	background-color: #FF8686;
+	margin: 10px;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 0px 5px 5px 5px;
+}
+
+books:before{
+	content: "Books:";
+	font-weight: bold;
+	white-space: pre; 
+	text-align: center;
+	font-size: 25px;
+}
+
+book{
+	padding: 5px 10px 10px 5px;
+	margin-top: 5px;
+	background-color: #FFA664;
+	display: block;
+	border: 1px solid black;
+	position: relative;
+}
+
+base > books > book > name{
+	color: black;
+	display: inline;
+}
+
+base > books > book > name:before{
+	content: "title: ";
+	font-weight: bold;
+}
+
+base > books > book > name:after{
+	content: "\A";
+	white-space: pre; 
+}
+
+base > books > book > category{
+	color: black;
+	display: inline;
+}
+
+base > books > book > category:before{
+	content: "category: ";
+	font-weight: bold;
+}
+
+base > books > book > category:after{
+	content: "\A";
+	white-space: pre; 
+}
+
+base > books > book > author{
+	color: black;
+	display: inline;
+}
+
+base > books > book > author:before{
+	content: "author: ";
+	font-weight: bold;
+}
+
+base > books > book > author:after{
+	content: "\A";
+	white-space: pre; 
+}
+
+base > books > book > publisher{
+	color: black;
+	display: inline;
+}
+
+base > books > book > publisher:before{
+	content: "publisher: ";
+	font-weight: bold;
+}
+
+base > books > book > publisher:after{
+	content: "\A";
+	white-space: pre; 
+}
+
+base > books > book > price{
+	color: black;
+	display: inline;
+}
+
+base > books > book > price:before{
+	content: "price: ";
+	font-weight: bold;
+}
+
+base > books > book > price:after{
+	content: " zł\A";
+	white-space: pre; 
+}
+
+
+
+
+other_products{
+	background-color: #FF8686;
+	margin: 10px;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 0px 5px 5px 5px;
+}
+
+other_products:before{
+	content: "Other products";
+	font-weight: bold;
+	white-space: pre; 
+	text-align: center;
+	font-size: 25px;
+}
+
+product{
+	padding: 5px 10px 10px 5px;
+	margin-top: 5px;
+	background-color: #FFA664;
+	display: block;
+	border: 1px solid black;
+	position: relative;
+}
+
+base > other_products > product > name{
+	color: black;
+	display: inline;
+}
+
+base > other_products > product > name:before{
+	content: "name: ";
+	font-weight: bold;
+}
+
+base > other_products > product > name:after{
+	content: "\A";
+	white-space: pre; 
+}
+
+base > other_products > product > brand{
+	color: black;
+	display: inline;
+}
+
+base > other_products > product > brand:before{
+	content: "brand: ";
+	font-weight: bold;
+}
+
+base > other_products > product > brand:after{
+	content: "\A";
+	white-space: pre; 
+}
+
+base > other_products > product > price{
+	color: black;
+	display: inline;
+}
+
+base > other_products > product > price:before{
+	content: "price: ";
+	font-weight: bold;
+}
+
+base > other_products > product > price:after{
+	content: " zł\A";
+	white-space: pre; 
+}
+
+suppliers{
+	background-color: #FF8686;
+	margin: 10px;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 0px 5px 5px 5px;
+}
+
+suppliers:before{
+	content: "Suppliers";
+	font-weight: bold;
+	white-space: pre; 
+	text-align: center;
+	font-size: 25px;
+}
+
+supplier{
+	padding: 5px 10px 10px 5px;
+	margin-top: 5px;
+	background-color: #FFA664;
+	display: block;
+	border: 1px solid black;
+	position: relative;
+}
+
+supplier:before{
+	content: "id: "attr(idSupplierId)"\A";
+	font-weight: bold;
+	white-space: pre; 
+}
+
+base > suppliers > supplier > name{
+	color: black;
+	display: inline;
+}
+
+base > suppliers > supplier > name:before{
+	content: "company: ";
+	font-weight: bold;
+	white-space: pre; 
+}
+
+base > suppliers > supplier > name:after{
+	content: "\A";
+	white-space: pre; 
+}
+
+base > suppliers > supplier > category{
+	color: black;
+	display: inline;
+}
+
+base > suppliers > supplier > category:before{
+	content: "category: ";
+	font-weight: bold;
+}
+
+base > suppliers > supplier > category:after{
+	content: "\A";
+	white-space: pre; 
+}
+
+base > suppliers > supplier > TIN{
+	color: black;
+	display: inline;
+}
+
+base > suppliers > supplier > TIN:before{
+	content: "TIN: ";
+	font-weight: bold;
+}
+
+base > suppliers > supplier > TIN:after{
+	content: "\A";
+	white-space: pre; 
+}
+
+base > suppliers > supplier > email{
+	color: black;
+	display: inline;
+}
+
+base > suppliers > supplier > email:before{
+	content: "email: ";
+	font-weight: bold;
+}
+
+base > suppliers > supplier > email:after{
+	content: "\A";
+	white-space: pre; 
+}
+
+base > suppliers > supplier > phone_number{
+	color: black;
+	display: inline;
+}
+
+base > suppliers > supplier > phone_number:before{
+	content: "phone number: ";
+	font-weight: bold;
+}
+
+base > suppliers > supplier > phone_number:after{
+	content: "\A";
+	white-space: pre; 
+}
+
+inventory{
+	background-color: #FF8686;
+	margin: 10px;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 0px 5px 5px 5px;
+}
+
+inventory:before{
+	content: "Inventory";
+	font-weight: bold;
+	white-space: pre; 
+	text-align: center;
+	font-size: 25px;
+}
+
+inventory > prInv{
+	padding: 5px 10px 10px 5px;
+	margin-top: 5px;
+	background-color: #FFA664;
+	display: block;
+	border: 1px solid black;
+	position: relative;
+}
+
+inventory > prInv:before{
+	content: "id: "attr(barcodeId)"\A";
+	font-weight: bold;
+	white-space: pre; 
+}
+
+base > inventory > prInv > amount{
+	color: black;
+	display: inline;
+}
+
+base > inventory > prInv > amount:before{
+	content: "amount: ";
+	font-weight: bold;
+}
+
+base > inventory > prInv > amount:after{
+	content: "\A";
+	white-space: pre; 
+}
+
+orders{
+	background-color: #FF8686;
+	margin: 10px;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 0px 5px 5px 5px;
+}
+
+orders:before{
+	content: "Orders";
+	font-weight: bold;
+	white-space: pre; 
+	text-align: center;
+	font-size: 25px;
+}
+
+order{
+	padding: 5px 10px 10px 5px;
+	margin-top: 5px;
+	background-color: #FFA664;
+	display: block;
+	border: 1px solid black;
+	position: relative;
+}
+
+base > orders > order > id{
+	color: black;
+	display: inline;
+}
+
+base > orders > order > id:before{
+	content: "id order: ";
+	font-weight: bold;
+}
+
+base > orders > order > id:after{
+	content: "\A";
+	white-space: pre; 
+}
+
+base > orders > order > cart > prOrd{
+	padding: 5px 10px 10px 5px;
+	margin-top: 5px;
+	background-color: #FFA664;
+	display: block;
+	border: 1px solid black;
+	position: relative;
+}
+
+base > orders > order > cart > prOrd{
+	color: black;
+}
+
+base > orders > order > cart > prOrd:before{
+	content: "barcode: "attr(barcodeIdRef)"\A ilosc: ";
+	font-weight: bold;
+	white-space: pre; 
+}
+
+base > orders > order > cart > prOrd:after{
+	content: "\A";
+	white-space: pre; 
+}

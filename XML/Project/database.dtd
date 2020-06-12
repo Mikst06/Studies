@@ -1,0 +1,35 @@
+<!ELEMENT base (books,other_products,suppliers,inventory,orders)>
+<!ELEMENT books (book*)>
+<!ELEMENT book (name, category, author, publisher, price)>
+<!ELEMENT other_products (product*)>
+<!ELEMENT product (name, brand, price)>
+<!ELEMENT suppliers (supplier*)>
+<!ELEMENT supplier (name, category, TIN, email, phone_number)>
+<!ELEMENT inventory (prInv*)>
+<!ELEMENT prInv (amount)>
+<!ELEMENT orders (order*)>
+<!ELEMENT order (id, cart)>
+<!ELEMENT cart (prOrd*)>
+<!ELEMENT prOrd (amount)>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT brand (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT TIN (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone_number (#PCDATA)>
+<!ELEMENT amount (#PCDATA)>
+
+<!ATTLIST supplier idSupplierId ID #IMPLIED>
+<!ATTLIST book barcodeIdRef IDREF #REQUIRED>
+<!ATTLIST book idSupplierIdRef IDREF #REQUIRED>
+<!ATTLIST product barcodeIdRef IDREF #REQUIRED>
+<!ATTLIST product idSupplierIdRef IDREF #REQUIRED>
+<!ATTLIST prInv barcodeId ID #REQUIRED>
+<!ATTLIST prOrd barcodeIdRef IDREF #REQUIRED>
+
+
